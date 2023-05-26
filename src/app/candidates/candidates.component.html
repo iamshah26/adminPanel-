@@ -1,0 +1,759 @@
+<div class="main-wrapper d-flex">
+    <app-sidenav></app-sidenav>
+    <div class="middle-wrapper d-flex w-100 flex-column">
+        <app-header></app-header>
+        <div class="content-box-wrapper d-flex w-100">
+            <div class="middle-content d-flex">
+                <div class="page-content-wrapper dashboard">
+                    <div class="w-100 inbox-container px-3">
+                        <div class="filter-container candidate-left-filter-opt">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <ul class="list-group list-group-horizontal border-0">
+                                        <li class="list-group-item border-0 p-0">
+                                            <div class="icon-input">
+                                                <i class="fa-light fa-magnifying-glass"></i>
+                                                <input class="form-control" placeholder="Search candidates.. ">
+                                            </div>
+                                        </li>
+                                        <li class="list-inline-item border-0 iconButton iconHover medium ms-2"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Filters">
+                                            <a href="#"
+                                                class="iconButton medium iconHover cherry panelToggle filtericons"
+                                                data-bs-toggle="button">
+                                                <i class="fa-light fa-filter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item border-0 iconButton iconHover medium after-select-fun"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="SMS"
+                                            style="display: none;">
+                                            <a href="#" class="iconButton medium iconHover" data-bs-toggle="modal"
+                                                data-bs-target="#sendsms">
+                                                <i class="fa-light fa-comment-alt-lines"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item border-0 iconButton iconHover medium after-select-fun"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Robocall"
+                                            style="display: none;">
+                                            <a href="#" class="iconButton medium iconHover" data-bs-toggle="modal"
+                                                data-bs-target="#sendrobocall">
+                                                <i class="fa-regular fa-phone"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item border-0 iconButton iconHover medium after-select-fun"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Whatsapp"
+                                            style="display: none;">
+                                            <a href="#" class="iconButton medium iconHover" data-bs-toggle="modal"
+                                                data-bs-target="#sendwhatsapp">
+                                                <i class="fa-brands fa-whatsapp"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item border-0 iconButton iconHover medium after-select-fun"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Email"
+                                            style="display: none;">
+                                            <a href="#" class="iconButton medium iconHover" data-bs-toggle="modal"
+                                                data-bs-target="#sendemail">
+                                                <i class="fa-regular fa-envelope"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item border-0 iconButton iconHover medium after-select-fun"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title=" Add Tags"
+                                            style="display: none;">
+                                            <a href="#" class="iconButton medium iconHover" data-bs-toggle="modal"
+                                                data-bs-target="#addtags">
+                                                <i class="fal fa-tag"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item border-0 iconButton iconHover medium after-select-fun"
+                                            aria-label="..." data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                            style="display: none;">
+                                            <div class="dropdown w-auto">
+                                                <button class="btn iconButton medium rounded-circle" type="button"
+                                                    id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
+                                                    <i class="fal fa-ellipsis-v-alt"></i>
+                                                </button>
+                                                <ul class="dropdown-menu assignFirstDropdownList"
+                                                    aria-labelledby="dropdownMenuButton1">
+                                                    <li>
+                                                        <a class="dropdown-item p-1" href="#" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#createtalentpool">
+                                                            <button class="iconButton dropdown-iconBtn small">
+                                                                <i class="fal fa-plus me-2"></i>
+                                                            </button>Create Talent
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item p-1" href="#" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#assigntalentpool">
+                                                            <button class="iconButton dropdown-iconBtn small">
+                                                                <i class="fal fa-plus me-2"></i>
+                                                            </button>Assign To TalentPool
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item p-1" data-bs-toggle="offcanvas" href="#"
+                                                            role="button" aria-controls="addtask">
+                                                            <button class="iconButton dropdown-iconBtn small"
+                                                                id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                <i class="fa-light fa-check"></i>
+                                                            </button>Add task
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item p-1 disqualifybtn" href="#">
+                                                            <button class="iconButton dropdown-iconBtn small">
+                                                                <i class="fa-light fa-ban"></i>
+                                                            </button>Disqualify
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item donotcallbtn p-1" href="#">
+                                                            <button class="iconButton dropdown-iconBtn small">
+                                                                <i class="fa-light fa-phone-xmark"></i>
+                                                            </button>Don not Call
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item blacklistbtn p-1" href="#">
+                                                            <button class="iconButton dropdown-iconBtn small">
+                                                                <i class="fa-light fa-phone-slash"></i>
+                                                            </button>Black List
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item p-1" href="#" id="assignToList">
+                                                            <button class="iconButton dropdown-iconBtn small">
+                                                                <i class="fa-regular fa-plus"></i>
+                                                            </button>Assign To
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item p-1 removedbtn" href="#">
+                                                            <button class="iconButton dropdown-iconBtn small">
+                                                                <i class="fa-regular fa-minus"></i>
+                                                            </button> Remove
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item p-1" href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#add-source">
+                                                            <button class="iconButton dropdown-iconBtn small">
+                                                                <i class="fa-regular fa-arrow-down-left"></i>
+                                                            </button>Add source
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item p-1 followbtn" href="#">
+                                                            <button class="iconButton dropdown-iconBtn small">
+                                                                <i class="fa-light fa-bookmark"></i>
+                                                            </button>Follow
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item p-1 unfollowbtn" href="#">
+                                                            <button class="iconButton dropdown-iconBtn small">
+                                                                <i class="fa-regular fa-bookmark"></i>
+                                                            </button>Unfollow
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item p-1 deletebtn" href="#">
+                                                            <button class="iconButton dropdown-iconBtn small">
+                                                                <i class="fa-light fa-trash"></i>
+                                                            </button>Delete
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <ul class="dropdown-menu custom-dropdown medium shadow mt-2 assignSecondDropdownList"
+                                                    aria-labelledby="dropdownMenuButton2">
+                                                    <div>
+                                                        <ul class="dropdown-listing">
+                                                            <li class="dropdown-listing-header">
+                                                                <div class="head-section">
+                                                                    <div class="left">
+                                                                        <a href="#"
+                                                                            class="dropdown-item p-1 active dropdownBackBtn iconButton dropdown-iconBtn small active">
+                                                                            <i class="fal fa-arrow-left silver"></i>
+                                                                        </a>
+                                                                        <h6>Assign to</h6>
+                                                                    </div>
+                                                                    <a href="#"
+                                                                        class="iconButton dropdown-iconBtn small active dropdownCrossBtn"
+                                                                        id="dropdownMenuButton3"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <i class="fal fa-times silver"></i>
+                                                                    </a>
+                                                                </div>
+                                                                <form class="custom-searchbar">
+                                                                    <input class="form-control rounded-pill shadow-sm"
+                                                                        placeholder="Search" aria-label="Search">
+                                                                    <span class="btn searchbar-btn" type="submit">
+                                                                        <i class="fal fa-search silver"></i>
+                                                                    </span>
+                                                                </form>
+                                                            </li>
+                                                            <li class="list-body small-list">
+                                                                <div class="list-group list-group-flush">
+                                                                    <a href="javascript:;"
+                                                                        class="list-group-item d-flex level1Btn">
+                                                                        <div class="form-check w-100 p-0 theme-check">
+                                                                            <input class="form-check-input float-end"
+                                                                                type="checkbox" id="gridCheck">
+                                                                            <label
+                                                                                class="form-check-label coal d-flex align-items-center"
+                                                                                for="gridCheck">
+                                                                                <div class="list-down-icon">
+                                                                                    <span
+                                                                                        class="btn iconButton iconHover medium cherryTransBg">
+                                                                                        <img src="https://enteract.live/hire/images/avatar-1.png"
+                                                                                            alt="-"
+                                                                                            class="rounded-circle w-100">
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div class="w-100 list-txt">
+                                                                                    <div
+                                                                                        class="d-flex w-100 justify-content-between">
+                                                                                        <h6 class="mb-1 darkblue">Khalid
+                                                                                            Majid
+                                                                                        </h6>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </label>
+                                                                        </div>
+                                                                    </a>
+                                                                    <a href="javascript:;"
+                                                                        class="list-group-item d-flex level1Btn">
+                                                                        <div class="form-check w-100 p-0 theme-check">
+                                                                            <input class="form-check-input float-end"
+                                                                                type="checkbox" id="gridCheck2">
+                                                                            <label
+                                                                                class="form-check-label coal d-flex align-items-center"
+                                                                                for="gridCheck2">
+                                                                                <div class="list-down-icon">
+                                                                                    <span
+                                                                                        class="btn iconButton iconHover medium cherryTransBg">
+                                                                                        <img src="https://enteract.live/hire/images/avatar-2.png"
+                                                                                            alt="-"
+                                                                                            class="rounded-circle w-100">
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div class="w-100 list-txt">
+                                                                                    <div
+                                                                                        class="d-flex w-100 justify-content-between">
+                                                                                        <h6 class="mb-1 darkblue">Tahir
+                                                                                            Ahmed
+                                                                                        </h6>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </label>
+                                                                        </div>
+                                                                    </a>
+                                                                    <a href="javascript:;"
+                                                                        class="list-group-item d-flex level1Btn">
+                                                                        <div class="form-check w-100 p-0 theme-check">
+                                                                            <input class="form-check-input float-end"
+                                                                                type="checkbox" id="gridCheck3">
+                                                                            <label
+                                                                                class="form-check-label coal d-flex align-items-center"
+                                                                                for="gridCheck3">
+                                                                                <div class="list-down-icon">
+                                                                                    <span
+                                                                                        class="btn iconButton iconHover medium cherryTransBg">
+                                                                                        <img src="https://enteract.live/hire/images/avatar-3.png"
+                                                                                            alt="-"
+                                                                                            class="rounded-circle w-100">
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div class="w-100 list-txt">
+                                                                                    <div
+                                                                                        class="d-flex w-100 justify-content-between">
+                                                                                        <h6 class="mb-1 darkblue">
+                                                                                            Taimoor Kasi
+                                                                                        </h6>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </label>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="card-footer">
+                                                                <div class="dropdown-item">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary assignbtn dropdownCrossBtn">Assign</button>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="filters-opt">
+                                        <div class="dropdown ms-2 me-2 w-auto">
+                                            <button class="btn btn-success ice" type="button" data-bs-toggle="dropdown"
+                                                aria-expanded="false" id="adddd">
+                                                <i class="fa-light fa-plus"></i> Add Candidates
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="adddd">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <span class="iconButton medium emeraldTransBg"><i
+                                                                        class="fa-light fa-user"></i></span>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-2">
+                                                                <h6 class="m-0">Bulk Candidate Upload</h6>
+                                                                <small class="silver">Upload bulk Candidates (max
+                                                                    150)</small>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <span class="iconButton medium oceanTransBg">
+                                                                    <i class="fa-light fa-file-lines"></i>
+                                                                </span>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-2">
+                                                                <h6 class="m-0">Manually</h6>
+                                                                <small class="silver">Add Candidates one by one.</small>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <span class="iconButton medium skyTransBg">
+                                                                    <i class="fa-light fa-file-csv"></i>
+                                                                </span>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-2">
+                                                                <h6 class="m-0">Import from CSV</h6>
+                                                                <small class="silver">Add multiple candidates from a CSV
+                                                                    file.</small>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="dropdown w-auto border rounded">
+                                            <button class="btn iconButton iconHover medium" type="button" id="sorting1"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-regular fa-arrow-down-short-wide"></i>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="sorting1">
+                                                <li class="saltBg p-2 charcoal">
+                                                    <strong> Sorty By</strong>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                                        Name
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                                        Average Score
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                                        Job
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                                        Stage
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                                        Job fit Score
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                                        Profile Created
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                                        Talent Pool
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="dropdown w-auto mx-2">
+                                            <button class="btn iconButton medium text-start" type="button"
+                                                id="columnssort" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-light fa-table-columns"></i>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="columnssort">
+                                                <li class="saltBg p-2 charcoal">
+                                                    <strong> Adjust Columns</strong>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                                Name
+                                                            </label>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                                Average Score
+                                                            </label>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                                Job
+                                                            </label>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                                Stage
+                                                            </label>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                                Job fit Score
+                                                            </label>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                                Profile Created
+                                                            </label>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                                Talent Pool
+                                                            </label>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="dropdown w-auto">
+                                            <button class="btn iconButton medium" type="button" id="dropdownMenuButton1"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-regular fa-ellipsis"></i>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                <li>
+                                                    <a class="dropdown-item p-1" href="#">
+                                                        <button class="iconButton dropdown-iconBtn small"
+                                                            id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <i class="fa-solid fa-file-export"></i>
+                                                        </button>Export to CSV
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="query-container perfect-scrollbar" data-scrollbar="true" tabindex="-1"
+                            style="overflow: hidden; outline: none;">
+                            <div class="scroll-content">
+                                <div class="alert alert-secondary text-center email-info-alert p-2" role="alert">
+                                    All <strong>09</strong> candidates on this page are selected.
+                                    <a href="javascript:void(0);" class="all-conversation fw-bold sky btn">Select all
+                                        09 Candidates</a>
+                                    <a href="javascript:void(0);" class="clear-selection" style="display: none;">Clear
+                                        selection</a>
+                                </div>
+                                <div class="table-section">
+                                    <table class="table table-sm table-nowrap" id="table">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <div>
+                                                        <ul class="list-group list-group-horizontal border-0">
+                                                            <li class="list-group-item border-0 p-0 all-check-boxes">
+                                                                <input class="form-check-input me-1" type="checkbox"
+                                                                    aria-label="..." data-bs-toggle="tooltip"
+                                                                    data-bs-placement="bottom"
+                                                                    data-bs-original-title="Check All">
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </th>
+                                                <th>Name</th>
+                                                <th>Average Score</th>
+                                                <th>Job</th>
+                                                <th>Stage</th>
+                                                <th>Job fit Score</th>
+                                                <th> Profile Created <i class="fa-regular fa-arrow-down-short-wide"></i>
+                                                </th>
+                                                <th> Talent Pool</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="itProcurement isSla">
+                                                <td><input class="form-check-input me-1" type="checkbox"
+                                                        aria-label="..."></td>
+                                                <td>
+                                                    <span class="emailer-name" aria-label="..." data-bs-toggle="tooltip"
+                                                        data-bs-placement="bottom">
+                                                        <a href="#"> Fatima Ahmed
+                                                        </a></span>
+                                                </td>
+                                                <td> 75%</td>
+                                                <td>
+                                                    <small>Senior MArketer (Sample)</small>
+                                                </td>
+                                                <td>Applied</td>
+                                                <td>
+                                                    --
+                                                </td>
+                                                <td>a month ago</td>
+                                                <td>
+                                                    Next recruitment - Q3 (Sample)
+                                                </td>
+                                            </tr>
+                                            <tr class="whatsapp dari-speakers isSla">
+                                                <td><input class="form-check-input me-1" type="checkbox"
+                                                        aria-label="..."></td>
+                                                <td>
+                                                    <span class="emailer-name" aria-label="..." data-bs-toggle="tooltip"
+                                                        data-bs-placement="bottom">
+                                                        <a href="candidate-detail-start.html"> Shakeel Nawaz
+                                                        </a></span>
+                                                </td>
+                                                <td> 75%</td>
+                                                <td>
+                                                    <small>Senior MArketer (Sample)</small>
+                                                </td>
+                                                <td>Phone Interview</td>
+                                                <td>
+                                                    --
+                                                </td>
+                                                <td>2 days ago</td>
+                                                <td>
+                                                    --
+                                                </td>
+                                            </tr>
+                                            <tr class="email hrExecutive isSla">
+                                                <td><input class="form-check-input me-1" type="checkbox"
+                                                        aria-label="..."></td>
+                                                <td>
+                                                    <span class="emailer-name" aria-label="..." data-bs-toggle="tooltip"
+                                                        data-bs-placement="bottom">
+                                                        <a href="#"> Rizwan Khalid
+                                                        </a></span>
+                                                </td>
+                                                <td>--</td>
+                                                <td>
+                                                    <small>Senior MArketer (Sample)</small>
+                                                </td>
+                                                <td>On-site interview</td>
+                                                <td>
+                                                    75%
+                                                </td>
+                                                <td>a month ago</td>
+                                                <td>
+                                                    --
+                                                </td>
+                                            </tr>
+                                            <tr class="sms videographer isSla">
+                                                <td><input class="form-check-input me-1" type="checkbox"
+                                                        aria-label="..."></td>
+                                                <td>
+                                                    <span class="emailer-name" aria-label="..." data-bs-toggle="tooltip"
+                                                        data-bs-placement="bottom">
+                                                        <a href="#"> Ahmed Ali Khan
+                                                        </a></span>
+                                                </td>
+                                                <td>--</td>
+                                                <td>
+                                                    <small>Senior MArketer (Sample)</small>
+                                                </td>
+                                                <td>On-site interview</td>
+                                                <td>
+                                                    --
+                                                </td>
+                                                <td>15 days ago</td>
+                                                <td>
+                                                    --
+                                                </td>
+                                            </tr>
+                                            <tr class="itProcurement isSla">
+                                                <td><input class="form-check-input me-1" type="checkbox"
+                                                        aria-label="..."></td>
+                                                <td>
+                                                    <span class="emailer-name" aria-label="..." data-bs-toggle="tooltip"
+                                                        data-bs-placement="bottom">
+                                                        <a href="#"> Najid Bashir
+                                                        </a></span>
+                                                </td>
+                                                <td>--</td>
+                                                <td>
+                                                    <small>Senior MArketer (Sample)</small>
+                                                </td>
+                                                <td>Applied</td>
+                                                <td>
+                                                    --
+                                                </td>
+                                                <td>a month ago</td>
+                                                <td>
+                                                    --
+                                                </td>
+                                            </tr>
+                                            <tr class="technical-support isSla">
+                                                <td><input class="form-check-input me-1" type="checkbox"
+                                                        aria-label="..."></td>
+                                                <td>
+                                                    <span class="emailer-name" aria-label="..." data-bs-toggle="tooltip"
+                                                        data-bs-placement="bottom">
+                                                        <a href="#"> Farook Qasmi
+                                                        </a></span>
+                                                </td>
+                                                <td>--</td>
+                                                <td>
+                                                    <small>Senior MArketer (Sample)</small>
+                                                </td>
+                                                <td>Applied</td>
+                                                <td>
+                                                    --
+                                                </td>
+                                                <td>20 days ago</td>
+                                                <td>
+                                                    --
+                                                </td>
+                                            </tr>
+                                            <tr class="whatsapp">
+                                                <td><input class="form-check-input me-1" type="checkbox"
+                                                        aria-label="..."></td>
+                                                <td>
+                                                    <span class="emailer-name" aria-label="..." data-bs-toggle="tooltip"
+                                                        data-bs-placement="bottom">
+                                                        <a href="#"> Saif Raza
+                                                        </a></span>
+                                                </td>
+                                                <td> 100%</td>
+                                                <td>
+                                                    <small>Senior MArketer (Sample)</small>
+                                                </td>
+                                                <td>Phone Interview</td>
+                                                <td>
+                                                    --
+                                                </td>
+                                                <td>a month ago</td>
+                                                <td>
+                                                    --
+                                                </td>
+                                            </tr>
+                                            <tr class="email">
+                                                <td><input class="form-check-input me-1" type="checkbox"
+                                                        aria-label="..."></td>
+                                                <td>
+                                                    <span class="emailer-name" aria-label="..." data-bs-toggle="tooltip"
+                                                        data-bs-placement="bottom">
+                                                        <a href="#"> Sajjad Akber
+                                                        </a></span>
+                                                </td>
+                                                <td>--</td>
+                                                <td>
+                                                    <small>Recruiter (Sample)</small>
+                                                </td>
+                                                <td>Phone Interview</td>
+                                                <td>
+                                                    --
+                                                </td>
+                                                <td>a month ago</td>
+                                                <td>
+                                                    --
+                                                </td>
+                                            </tr>
+                                            <tr class="whatsapp">
+                                                <td><input class="form-check-input me-1" type="checkbox"
+                                                        aria-label="..."></td>
+                                                <td>
+                                                    <span class="emailer-name" aria-label="..." data-bs-toggle="tooltip"
+                                                        data-bs-placement="bottom">
+                                                        <a href="#"> Umer Masood
+                                                        </a></span>
+                                                </td>
+                                                <td> 30%</td>
+                                                <td>
+                                                    <small>Senior MArketer (Sample)</small>
+                                                </td>
+                                                <td>Applied</td>
+                                                <td>
+                                                    --
+                                                </td>
+                                                <td>15 days ago</td>
+                                                <td>
+                                                    --
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="scrollbar-track scrollbar-track-x" style="display: none;">
+                                <div class="scrollbar-thumb scrollbar-thumb-x"
+                                    style="width: 962px; transform: translate3d(0px, 0px, 0px);"></div>
+                            </div>
+                            <div class="scrollbar-track scrollbar-track-y" style="display: none;">
+                                <div class="scrollbar-thumb scrollbar-thumb-y"
+                                    style="height: 517px; transform: translate3d(0px, 0px, 0px);"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

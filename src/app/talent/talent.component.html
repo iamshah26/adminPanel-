@@ -1,0 +1,518 @@
+<div class="main-wrapper d-flex">
+    <app-sidenav></app-sidenav>
+    <div class="middle-wrapper d-flex w-100 flex-column">
+        <app-header></app-header>
+        <div class="content-box-wrapper d-flex w-100">
+            <div class="middle-content d-flex">
+                <div class="page-content-wrapper dashboard">
+                    <div class="w-100 inbox-container px-3">
+                        <div class="d-flex main-body-wrapper">
+                            <div class="agent-page-main-content">
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active position-relative" id="active" role="tabpanel"
+                                        aria-labelledby="active-tab">
+                                        <div class="row filter-container candidate-left-filter-opt">
+                                            <div class="col-sm-6">
+                                                <ul class="list-group list-group-horizontal border-0">
+                                                    <li class="list-group-item border-0 p-0">
+                                                        <div class="icon-input">
+                                                            <i class="fa-light fa-magnifying-glass"></i>
+                                                            <input class="form-control"
+                                                                placeholder="Search candidates.. ">
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-inline-item border-0 iconButton iconHover medium ms-2"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        data-bs-title="Filters">
+                                                        <a href="#0"
+                                                            class="iconButton medium iconHover cherry panelToggle filtericons"
+                                                            data-bs-toggle="button">
+                                                            <i class="fa-light fa-filter"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="pagination-bar filters-opt">
+                                                    <button class="btn btn-success ice" type="button"
+                                                        data-bs-toggle="modal" data-bs-target="#createtalentpool">
+                                                        <i class="fal fa-plus me-2"></i> Create Talent
+                                                    </button>
+                                                    <ul class="list-group list-group-horizontal border-0">
+                                                        <li class="border-0 iconButton iconHover medium"
+                                                            aria-label="..." data-bs-toggle="tooltip"
+                                                            data-bs-placement="bottom">
+                                                            <i class="fa-light fa-list"></i>
+                                                        </li>
+                                                        <li class="border-0 iconButton iconHover medium"
+                                                            aria-label="..." data-bs-toggle="tooltip"
+                                                            data-bs-placement="bottom">
+                                                            <i class="fa-light fa-table-cells-large"></i>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="d-flex align-items-lg-center mx-3">
+                                                        <p class="coal m-0 me-2">Show</p>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-toggle coal me-2" type="button"
+                                                                id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                10
+                                                            </button>
+                                                            <ul class="dropdown-menu"
+                                                                aria-labelledby="dropdownMenuButton1">
+                                                                <li>
+                                                                    <a class="dropdown-item" href="#">25</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item" href="#">50</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item" href="#">100</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item" href="#">All</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-container perfect-scrollbar" data-scrollbar="true"
+                                            tabindex="-1" style="overflow: hidden; outline: none;">
+                                            <div class="scroll-content">
+                                                <div class="table-section">
+                                                    <table class="table table-sm table-nowrap" id="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Name</th>
+                                                                <th>CANDIDATE</th>
+                                                                <th>Created TIME</th>
+                                                                <th> </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <span>
+                                                                        <a href="#"> Talent Pool 1
+                                                                        </a></span>
+                                                                </td>
+                                                                <td>
+                                                                    20
+                                                                </td>
+                                                                <td>2 hours ago</td>
+                                                                <td>
+                                                                    <div class="dropdown w-auto"
+                                                                        data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top">
+                                                                        <button
+                                                                            class="iconButton small iconHover d-inline-block"
+                                                                            id="dropdownMenuButton1"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="true">
+                                                                            <i class="far fa-ellipsis-v"></i>
+                                                                        </button>
+                                                                        <ul class="dropdown-menu custom-dropdown"
+                                                                            aria-labelledby="dropdownMenuButton1">
+                                                                            <li>
+                                                                                <a class="dropdown-item p-1" href="#0">
+                                                                                    <button
+                                                                                        class="iconButton dropdown-iconBtn small">
+                                                                                        <i class="fal fa-edit"></i>
+                                                                                    </button>Edit
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a class="dropdown-item p-1" href="#0">
+                                                                                    <button
+                                                                                        class="iconButton dropdown-iconBtn small">
+                                                                                        <i
+                                                                                            class="fa-light fa-box-archive"></i>
+                                                                                    </button>Archive
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a class="dropdown-item p-1" href="#0">
+                                                                                    <button
+                                                                                        class="iconButton dropdown-iconBtn small dropdown-item p-1">
+                                                                                        <i class="fal fa-trash"></i>
+                                                                                    </button> Delete
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span>
+                                                                        <a href="#"> Talent Pool 2
+                                                                        </a></span>
+                                                                </td>
+                                                                <td>
+                                                                    50
+                                                                </td>
+                                                                <td>4 hours ago</td>
+                                                                <td>
+                                                                    <div class="dropdown w-auto"
+                                                                        data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top">
+                                                                        <button
+                                                                            class="iconButton small iconHover d-inline-block"
+                                                                            id="dropdownMenuButton1"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="true">
+                                                                            <i class="far fa-ellipsis-v"></i>
+                                                                        </button>
+                                                                        <ul class="dropdown-menu custom-dropdown"
+                                                                            aria-labelledby="dropdownMenuButton1">
+                                                                            <li>
+                                                                                <a class="dropdown-item p-1" href="#0">
+                                                                                    <button
+                                                                                        class="iconButton dropdown-iconBtn small">
+                                                                                        <i class="fal fa-edit"></i>
+                                                                                    </button>Edit
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a class="dropdown-item p-1" href="#0">
+                                                                                    <button
+                                                                                        class="iconButton dropdown-iconBtn small">
+                                                                                        <i
+                                                                                            class="fa-light fa-box-archive"></i>
+                                                                                    </button>Archive
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a class="dropdown-item p-1" href="#0">
+                                                                                    <button
+                                                                                        class="iconButton dropdown-iconBtn small dropdown-item p-1">
+                                                                                        <i class="fal fa-trash"></i>
+                                                                                    </button> Delete
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span>
+                                                                        <a href="#"> Talent Pool 3
+                                                                        </a></span>
+                                                                </td>
+                                                                <td>
+                                                                    22
+                                                                </td>
+                                                                <td>4 hours ago</td>
+                                                                <td>
+                                                                    <div class="dropdown w-auto"
+                                                                        data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top">
+                                                                        <button
+                                                                            class="iconButton small iconHover d-inline-block"
+                                                                            id="dropdownMenuButton1"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="true">
+                                                                            <i class="far fa-ellipsis-v"></i>
+                                                                        </button>
+                                                                        <ul class="dropdown-menu custom-dropdown"
+                                                                            aria-labelledby="dropdownMenuButton1">
+                                                                            <li>
+                                                                                <a class="dropdown-item p-1" href="#0">
+                                                                                    <button
+                                                                                        class="iconButton dropdown-iconBtn small">
+                                                                                        <i class="fal fa-edit"></i>
+                                                                                    </button>Edit
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a class="dropdown-item p-1" href="#0">
+                                                                                    <button
+                                                                                        class="iconButton dropdown-iconBtn small">
+                                                                                        <i
+                                                                                            class="fa-light fa-box-archive"></i>
+                                                                                    </button>Archive
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a class="dropdown-item p-1" href="#0">
+                                                                                    <button
+                                                                                        class="iconButton dropdown-iconBtn small dropdown-item p-1">
+                                                                                        <i class="fal fa-trash"></i>
+                                                                                    </button> Delete
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="scrollbar-track scrollbar-track-x" style="display: none;">
+                                                <div class="scrollbar-thumb scrollbar-thumb-x"
+                                                    style="width: 377px; transform: translate3d(0px, 0px, 0px);"></div>
+                                            </div>
+                                            <div class="scrollbar-track scrollbar-track-y" style="display: none;">
+                                                <div class="scrollbar-thumb scrollbar-thumb-y"
+                                                    style="height: 517px; transform: translate3d(0px, 0px, 0px);"></div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center fixed-pegination">
+                                            <div>
+                                                Showing 1 -10 of 250 entries
+                                            </div>
+                                            <div>
+                                                <nav aria-label="Page navigation example">
+                                                    <ul class="pagination mb-0">
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">Previous</a>
+                                                        </li>
+                                                        <li class="page-item active">
+                                                            <a class="page-link" href="#">1</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">2</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">3</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">...</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">8</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">Next</a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="archive" role="tabpanel"
+                                        aria-labelledby="archive-tab">
+                                        <div class="row filter-container candidate-left-filter-opt">
+                                            <div class="col-sm-6">
+                                                <ul class="list-group list-group-horizontal border-0">
+                                                    <li class="list-group-item border-0 p-0">
+                                                        <div class="icon-input">
+                                                            <i class="fa-light fa-magnifying-glass"></i>
+                                                            <input class="form-control"
+                                                                placeholder="Search candidates.. ">
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-inline-item border-0 iconButton iconHover medium ms-2"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        data-bs-title="Filters">
+                                                        <a href="#0"
+                                                            class="iconButton medium iconHover cherry panelToggle filtericons"
+                                                            data-bs-toggle="button">
+                                                            <i class="fa-light fa-filter"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="pagination-bar filters-opt">
+                                                    <button class="btn btn-success ice me-2" type="button"
+                                                        data-bs-toggle="modal" data-bs-target="#createtalentpool">
+                                                        <i class="fal fa-plus me-2"></i> Create Talent
+                                                    </button>
+                                                    <ul class="list-group list-group-horizontal border-0">
+                                                        <li class="border-0 iconButton iconHover medium"
+                                                            aria-label="..." data-bs-toggle="tooltip"
+                                                            data-bs-placement="bottom">
+                                                            <i class="fa-light fa-list"></i>
+                                                        </li>
+                                                        <li class="border-0 iconButton iconHover medium"
+                                                            aria-label="..." data-bs-toggle="tooltip"
+                                                            data-bs-placement="bottom">
+                                                            <i class="fa-light fa-table-cells-large"></i>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="d-flex align-items-lg-center mx-3">
+                                                        <p class="coal m-0 me-2">Show</p>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-toggle coal me-2" type="button"
+                                                                id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                10
+                                                            </button>
+                                                            <ul class="dropdown-menu"
+                                                                aria-labelledby="dropdownMenuButton1">
+                                                                <li>
+                                                                    <a class="dropdown-item" href="#">25</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item" href="#">50</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item" href="#">100</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item" href="#">All</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-container perfect-scrollbar" data-scrollbar="true"
+                                            tabindex="-1" style="overflow: hidden; outline: none;">
+                                            <div class="scroll-content">
+                                                <div class="table-section">
+                                                    <table class="table table-sm table-nowrap" id="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Name</th>
+                                                                <th>CANDIDATE</th>
+                                                                <th>Created TIME</th>
+                                                                <th> </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <span>
+                                                                        <a href="#"> Q2 Hiring
+                                                                        </a></span>
+                                                                </td>
+                                                                <td>
+                                                                    20
+                                                                </td>
+                                                                <td>2 hours ago</td>
+                                                                <td>
+                                                                    <div class="dropdown w-auto"
+                                                                        data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top">
+                                                                        <button
+                                                                            class="iconButton small iconHover d-inline-block"
+                                                                            id="dropdownMenuButton1"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="true">
+                                                                            <i class="far fa-ellipsis-v"></i>
+                                                                        </button>
+                                                                        <ul class="dropdown-menu custom-dropdown"
+                                                                            aria-labelledby="dropdownMenuButton1">
+                                                                            <li>
+                                                                                <a class="dropdown-item p-1" href="#0">
+                                                                                    <button
+                                                                                        class="iconButton dropdown-iconBtn small">
+                                                                                        <i class="fal fa-edit"></i>
+                                                                                    </button>Edit
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a class="dropdown-item p-1" href="#0">
+                                                                                    <button
+                                                                                        class="iconButton dropdown-iconBtn small dropdown-item p-1">
+                                                                                        <i class="fal fa-trash"></i>
+                                                                                    </button> Delete
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span>
+                                                                        <a href="#"> Talent Pool 2
+                                                                        </a></span>
+                                                                </td>
+                                                                <td>
+                                                                    50
+                                                                </td>
+                                                                <td>4 hours ago</td>
+                                                                <td>
+                                                                    <div class="dropdown w-auto"
+                                                                        data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top">
+                                                                        <button
+                                                                            class="iconButton small iconHover d-inline-block"
+                                                                            id="dropdownMenuButton1"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="true">
+                                                                            <i class="far fa-ellipsis-v"></i>
+                                                                        </button>
+                                                                        <ul class="dropdown-menu custom-dropdown"
+                                                                            aria-labelledby="dropdownMenuButton1">
+                                                                            <li>
+                                                                                <a class="dropdown-item p-1" href="#0">
+                                                                                    <button
+                                                                                        class="iconButton dropdown-iconBtn small">
+                                                                                        <i class="fal fa-edit"></i>
+                                                                                    </button>Edit
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a class="dropdown-item p-1" href="#0">
+                                                                                    <button
+                                                                                        class="iconButton dropdown-iconBtn small dropdown-item p-1">
+                                                                                        <i class="fal fa-trash"></i>
+                                                                                    </button> Delete
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="scrollbar-track scrollbar-track-x" style="display: none;">
+                                                <div class="scrollbar-thumb scrollbar-thumb-x"></div>
+                                            </div>
+                                            <div class="scrollbar-track scrollbar-track-y" style="display: none;">
+                                                <div class="scrollbar-thumb scrollbar-thumb-y"></div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center fixed-pegination">
+                                            <div>
+                                                Showing 1 -10 of 250 entries
+                                            </div>
+                                            <div>
+                                                <nav aria-label="Page navigation example">
+                                                    <ul class="pagination mb-0">
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">Previous</a>
+                                                        </li>
+                                                        <li class="page-item active">
+                                                            <a class="page-link" href="#">1</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">2</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">3</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">...</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">8</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">Next</a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
