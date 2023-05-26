@@ -4,6 +4,22 @@
 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)*/
 @import "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap";
 
+/* @import "./fonts/fa-brands-400.ttf";
+@import "./fonts/fa-brands-400.woff2";
+@import "./fonts/fa-duotone-900.ttf";
+@import "./fonts/fa-duotone-900.woff2";
+@import "./fonts/fa-light-300.ttf";
+@import "./fonts/fa-light-300.woff2";
+@import "./fonts/fa-regular-400.ttf";
+@import "./fonts/fa-regular-400.woff2";
+@import "./fonts/fa-solid-900.ttf";
+@import "./fonts/fa-solid-900.woff2";
+@import "./fonts/fa-thin-100.ttf";
+@import "./fonts/fa-thin-100.woff2";
+@import "./fonts/fa-v4compatibility.ttf";
+@import "./fonts/fa-v4compatibility.woff2"; */
+
+
 :root {
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
@@ -29300,14 +29316,14 @@ fieldset:disabled .btn {
     --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands"
 }
 
-/* 
+
 @font-face {
     font-family: Font Awesome\ 6 Brands;
     font-style: normal;
     font-weight: 400;
     font-display: block;
-    src: url(../fonts/fa-brands-400.woff2) format("woff2"),url(../fonts/fa-brands-400.ttf) format("truetype")
-} */
+    src: url(./assets/fonts/fa-brands-400.woff2) format("woff2"),url(./assets/fonts/fa-brands-400.ttf) format("truetype")
+}
 
 .fa-brands,
 .fab {
@@ -31184,13 +31200,13 @@ fieldset:disabled .btn {
     --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro"
 }
 
-/* @font-face {
+@font-face {
     font-family: Font Awesome\ 6 Pro;
     font-style: normal;
     font-weight: 300;
     font-display: block;
-    src: url(../fonts/fa-light-300.woff2) format("woff2"),url(../fonts/fa-light-300.ttf) format("truetype")
-} */
+    src: url(./assets/fonts/fa-light-300.woff2) format("woff2"),url(./assets/fonts/fa-light-300.ttf) format("truetype")
+}
 
 .fa-light,
 .fal {
@@ -31206,13 +31222,13 @@ fieldset:disabled .btn {
     --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Pro"
 }
 
-/* @font-face {
+@font-face {
     font-family: Font Awesome\ 6 Pro;
     font-style: normal;
     font-weight: 900;
     font-display: block;
-    src: url(../fonts/fa-solid-900.woff2) format("woff2"),url(../fonts/fa-solid-900.ttf) format("truetype")
-} */
+    src: url(./assets/fonts/fa-solid-900.woff2) format("woff2"),url(./assets/fonts/fa-solid-900.ttf) format("truetype")
+}
 
 .fa-solid,
 .fas {
@@ -31228,13 +31244,13 @@ fieldset:disabled .btn {
     --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro"
 }
 
-/* @font-face {
+@font-face {
     font-family: Font Awesome\ 6 Pro;
     font-style: normal;
     font-weight: 100;
     font-display: block;
-    src: url(../fonts/fa-thin-100.woff2) format("woff2"),url(../fonts/fa-thin-100.ttf) format("truetype")
-} */
+    src: url(./assets/fonts/fa-thin-100.woff2) format("woff2"),url(./assets/fonts/fa-thin-100.ttf) format("truetype")
+}
 
 .fa-thin,
 .fat {
@@ -31250,13 +31266,13 @@ fieldset:disabled .btn {
     --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Pro"
 }
 
-/* @font-face {
+@font-face {
     font-family: Font Awesome\ 6 Pro;
     font-style: normal;
     font-weight: 400;
     font-display: block;
-    src: url(../fonts/fa-regular-400.woff2) format("woff2"),url(../fonts/fa-regular-400.ttf) format("truetype")
-} */
+    src: url(./assets/fonts/fa-regular-400.woff2) format("woff2"),url(./assets/fonts/fa-regular-400.ttf) format("truetype")
+}
 
 .fa-regular,
 .far {
