@@ -29,14 +29,22 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatCardModule } from '@angular/material/card';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CalanderComponent } from './calander/calander.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AuthGuard } from 'src/guards/auth.guard';
 import { AdminGuard } from 'src/guards/admin.guard';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { adminReducer } from 'src/Store/admin.reducers';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
+
+
 
 @NgModule({
   declarations: [
@@ -55,8 +63,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     InterviewComponent,
     TaskComponent,
     ActivitiesComponent,
-    
-    
+
+
+
   ],
   imports: [
     BrowserModule,
@@ -80,11 +89,18 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatCheckboxModule,
     FontAwesomeModule,
     RouterModule,
-    ReactiveFormsModule
-    
-    
+    ReactiveFormsModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatTableModule,
+
+    StoreModule.forRoot({ admin: adminReducer }),
+    StoreDevtoolsModule.instrument(),
+
+
+
   ],
-  providers: [AuthGuard , AdminGuard],
+  providers: [AuthGuard, AdminGuard],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

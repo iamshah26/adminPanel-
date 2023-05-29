@@ -92,7 +92,7 @@
     </a>
     </ul>
 </div>
-<nav id="left-sidebar-expand" [class.panel-open]="isPanelOpen">
+<nav id="left-sidebar-expand" [class.panel-open]="isPanelOpen$ | async">
     <div class="leftbar-console-expanded">
         <div class="sidebar-header pe-3 ps-3">
             <h5 class="fw-bold mt-3 ms-1">
